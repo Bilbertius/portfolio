@@ -207,8 +207,6 @@ p.content {
   margin-right: 20vw;
 }
 
-.project-card {
-}
 .image-container {
   display: flex;
   flex-flow: row wrap;
@@ -225,7 +223,7 @@ p.content {
   border: 4px outset rgb(47, 219, 191);
 }
 
-.project-card > div > p {
+.project-card > p {
   background: -webkit-linear-gradient(
     250deg,
     hsl(172, 51%, 45%) 30%,

@@ -14,6 +14,7 @@
     hsl(197, 87%, 63%) 55%,
     hsl(217, 65%, 25%) 56%
   );
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
@@ -38,7 +39,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: block;
 }
 
@@ -79,7 +80,7 @@ header > h1 {
   padding: 1.5em;
   margin: 0;
   font-size: 5em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: -webkit-linear-gradient(
     250deg,
     hsl(172, 51%, 45%) 30%,
@@ -180,14 +181,15 @@ h2 {
   flex-flow: column nowrap;
   background-attachment: fixed;
   align-items: flex-start;
-  height: 200vh;
+  min-height: 150vh;
 }
 
 .project-card > h3 {
   color: hsl(176, 70%, 65%);
 }
 h2.content-header {
-  height: 35vw;
+  font-size: 3.4em;
+  height: 30vw;
 }
 p.content {
   display: flex;
@@ -238,12 +240,21 @@ p.content {
 footer {
   display: flex;
   background-color: rgb(12, 51, 143);
+  height: 10vh;
 }
 
-a#app-link {
-  font-size: 1em;
+footer ul {
+  list-style-type: none;
+}
+footer ul li {
+  color: #fff;
+}
+
+#projects a#app-link {
+  font-size: 1.4em;
   cursor: pointer;
-  text-decoration: underline;
+
+  align-self: center;
 }
 
 @media screen and (max-width: 700px) {

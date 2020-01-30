@@ -1,19 +1,19 @@
 :root {
   --backgrad: linear-gradient(
     -22deg,
-    hsl(229, 77%, 46%) 20%,
-    hsl(209, 100%, 44%) 33%,
-    hsl(144, 79%, 44%) 34%,
+    hsl(229, 77%, 42%) 20%,
+    hsl(209, 100%, 25%) 33%,
+    hsl(281, 86%, 28%) 34%,
     hsl(217, 65%, 25%) 35%,
-    hsl(217, 66%, 29%) 70%
+    hsl(217, 66%, 25%) 70%
   );
   --backgradFlip: linear-gradient(
     18deg,
-    hsl(208, 65%, 49%) 20%,
-    hsl(209, 100%, 44%) 54%,
-    hsl(148, 90%, 48%) 55%,
-    hsl(217, 65%, 25%) 56%,
-    hsl(217, 66%, 29%) 70%
+    hsl(208, 70%, 25%) 20%,
+    hsl(209, 81%, 25%) 54%,
+    hsl(325, 96%, 23%) 55%,
+    hsl(217, 65%, 24%) 56%,
+    hsl(217, 70%, 22%) 70%
   );
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -21,6 +21,11 @@
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -55,16 +60,15 @@ header {
 }
 
 header > blockquote {
-
   font-size: 1.4em;
   letter-spacing: 0.2em;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background: -webkit-linear-gradient(
     80deg,
-    hsl(130, 97%, 75%),
-    hsla(158, 100%, 59%, 0.93),
-    hsl(179, 94%, 57%),
-    hsl(181, 100%, 43%)
+    hsl(130, 97%, 85%),
+    hsl(158, 100%, 89%),
+    hsl(179, 94%, 77%),
+    hsl(181, 100%, 68%)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -82,9 +86,9 @@ header > h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: -webkit-linear-gradient(
     250deg,
-    hsl(173, 100%, 60%) 30%,
-    hsl(204, 100%, 72%) 10%,
-    hsl(266, 87%, 80%) 45%
+    hsl(173, 91%, 77%) 30%,
+    hsl(204, 100%, 83%) 10%,
+    hsl(266, 94%, 86%) 45%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -93,15 +97,15 @@ header > h1 {
 }
 
 h2 {
-  color: hsla(231, 33%, 53%, 0.808);
+  color: hsl(232, 100%, 87%);
   font-size: 2em;
   margin-top: 1em;
 }
 .scroll-container {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
   width: 100vw;
 }
 nav {
@@ -141,17 +145,15 @@ li > a {
   flex-grow: 1;
   min-height: 120vh;
   width: 100vw;
-
 }
 
 .scroll-section > p,
 h2 {
-
   background: -webkit-linear-gradient(
     250deg,
-    hsl(172, 51%, 45%) 30%,
-    hsl(204, 90%, 48%) 10%,
-    hsl(199, 93%, 72%) 45%
+    hsl(172, 51%, 85%) 30%,
+    hsl(204, 90%, 68%) 10%,
+    hsl(199, 93%, 82%) 45%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -185,7 +187,6 @@ h2#about-header {
   background-attachment: fixed;
 }
 
-
 #projects {
   background: var(--backgradFlip);
   flex-flow: column nowrap;
@@ -194,9 +195,8 @@ h2#about-header {
   min-height: 250vh;
 }
 
-
 .project-card > h3 {
-  color: hsl(176, 70%, 65%);
+  color: hsl(176, 100%, 80%);
 }
 h2.content-header {
   display: block;
@@ -257,40 +257,67 @@ footer {
   background-color: hsl(222, 92%, 28%);
   height: 20vh;
   width: 100vw;
-  padding: 5vw;
+  flex-direction: column;
+  align-items: center;
 }
 
+footer h3 {
+  width: 100%;
+  margin-left: 5vw;
+  color: hsl(151, 61%, 71%);
+  font-size: 1.5em;
+}
 footer ul {
   list-style-type: none;
 }
 footer ul li {
-  color: #fff;
+  color: hsl(140, 68%, 83%);
+  font-size: 0.8em;
 }
 
 #projects a.app-link {
   font-size: 1.2em;
   cursor: pointer;
   align-self: center;
-
 }
-
 
 @media screen and (min-width: 720px) {
   header > blockquote {
     font-size: 2.5em;
   }
   .scroll-section > p {
-    font-size: 2.5em;
+    font-size: 2em;
+    padding: 15vw;
   }
 
   h2.content-header {
-    font-size: 3em;
+    font-size: 3.2em;
     padding: 5vh 5vw;
   }
 
   .image-container {
-    flex-flow: column wrap;
+    flex-flow: row wrap;
   }
-  .image-container > img { width: 30vw}
+  .image-container > img {
+    width: 30vw;
+  }
+
+  footer ul li {
+    font-size: 1.4em;
+  }
 }
 
+@media screen and (min-width: 1000px) {
+  p.content {
+    padding: 5% 30%;
+  }
+
+  .project-card > p {
+    font-size: 1.8em;
+    padding: 5% 30%;
+  }
+
+  header > blockquote {
+    padding: 5% 30%;
+  }
+}

@@ -151,7 +151,7 @@ li > a {
 h2 {
   background: -webkit-linear-gradient(
     250deg,
-    hsl(172, 51%, 85%) 30%,
+    #c5ece7 30%,
     hsl(204, 90%, 68%) 10%,
     hsl(199, 93%, 82%) 45%
   );

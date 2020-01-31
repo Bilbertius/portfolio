@@ -1,17 +1,17 @@
 :root {
   --backgrad: linear-gradient(
     -22deg,
-    hsl(229, 77%, 42%) 20%,
+    hsl(199, 95%, 22%) 20%,
     hsl(209, 100%, 25%) 33%,
-    hsl(281, 86%, 28%) 34%,
-    hsl(217, 65%, 25%) 35%,
-    hsl(217, 66%, 25%) 70%
+    hsl(281, 85%, 33%) 34%,
+    hsl(217, 85%, 25%) 35%,
+    hsl(217, 66%, 15%) 70%
   );
   --backgradFlip: linear-gradient(
     18deg,
-    hsl(208, 70%, 25%) 20%,
+    hsl(208, 70%, 15%) 20%,
     hsl(209, 81%, 25%) 54%,
-    hsl(325, 96%, 23%) 55%,
+    hsl(276, 99%, 29%) 55%,
     hsl(217, 65%, 24%) 56%,
     hsl(217, 70%, 22%) 70%
   );
@@ -60,7 +60,7 @@ header {
 }
 
 header > blockquote {
-  font-size: 1.4em;
+  font-size: 1.2em;
   letter-spacing: 0.2em;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background: -webkit-linear-gradient(
@@ -104,17 +104,19 @@ h2 {
 .scroll-container {
   display: flex;
   flex-flow: column nowrap;
+ 
   align-items: center;
   margin: 0 auto;
   width: 100vw;
 }
 nav {
-  height: 10vh;
+  height: 6vh;
   width: 100vw;
   display: none;
   justify-content: flex-end;
+  background: var(--backgradFlip);
   align-items: center;
-  background: inherit;
+
   position: fixed;
   top: 0;
 }
@@ -134,10 +136,13 @@ nav ul li {
 
 li > a {
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.6em;
   font-weight: light;
 
   color: hsl(179, 64%, 42%);
+}
+li:active {
+  border-bottom: 5px solid rgb(133, 9, 235); 
 }
 
 .scroll-section {
@@ -164,13 +169,13 @@ h2 {
   font-size: 2em;
   padding: 5vh 5vw;
 
-  height: 35vh;
+  height: 30vh;
 }
 h2#about-header {
   width: 80vw;
 }
 .scroll-section > p {
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 10vw;
 }
 #about {
@@ -196,6 +201,7 @@ h2#about-header {
 }
 
 .project-card > h3 {
+  font-size: 2em;
   color: hsl(176, 100%, 80%);
 }
 h2.content-header {
@@ -243,29 +249,46 @@ p.content {
 .project-card > p {
   background: -webkit-linear-gradient(
     250deg,
-    hsl(174, 62%, 52%) 30%,
-    hsl(158, 100%, 59%) 10%,
-    hsl(199, 93%, 72%) 45%
+    hsl(174, 62%, 72%) 30%,
+    hsl(158, 100%, 69%) 10%,
+    hsl(199, 93%, 82%) 45%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.4em;
+  font-size: 1.6em;
   text-align: left;
 }
+
+#links {
+  display: flex;
+  justify-content: space-around;
+}
+
+#links a {
+  color: hsl(162, 98%, 22%);
+  padding: 10px 15px; 
+  border: 5px outset aquamarine;
+  align-items: center;
+  box-shadow: inset 0px 0px 50px plum; 
+}
+
 footer {
   display: flex;
-  background-color: hsl(222, 92%, 28%);
-  height: 20vh;
+  background-color: hsl(222, 93%, 21%);
+  height: 25vh;
   width: 100vw;
   flex-direction: column;
   align-items: center;
+  box-shadow: inset 0px 5px 15px hsl(271, 100%, 57%);
+  margin-bottom: 0; 
 }
 
 footer h3 {
   width: 100%;
   margin-left: 5vw;
+  margin-bottom: 0; 
   color: hsl(151, 61%, 71%);
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 footer ul {
   list-style-type: none;
@@ -284,6 +307,10 @@ footer ul li {
 @media screen and (min-width: 720px) {
   header > blockquote {
     font-size: 2.5em;
+  }
+
+  nav {
+    display: flex; 
   }
   .scroll-section > p {
     font-size: 2em;
@@ -311,13 +338,15 @@ footer ul li {
   p.content {
     padding: 5% 30%;
   }
-
+  header {
+    padding-top: 4%; 
+  }
   .project-card > p {
-    font-size: 1.8em;
+    font-size: 2em;
     padding: 5% 30%;
   }
 
   header > blockquote {
-    padding: 5% 30%;
+    padding: 5% 15%;
   }
 }

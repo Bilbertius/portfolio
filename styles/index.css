@@ -264,12 +264,12 @@ p.content {
 }
 
 #links a.app-link {
-  color: hsl(162, 98%, 22%);
+  color: hsl(220, 95%, 22%);
   padding: 6px 4px;
   font-size: 1.1em;
-  border: 3px outset aquamarine;
+  background-color: aquamarine;
   align-items: center;
-  box-shadow: inset 0px 0px 50px plum; 
+  box-shadow: -3px -3px 6px aquamarine, 3px 3px 6px aqua ; 
 }
 section#flex-footer {
   display: block;
